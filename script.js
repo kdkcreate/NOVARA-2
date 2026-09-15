@@ -87,37 +87,20 @@ document.querySelectorAll('.reveal').forEach((item) => {
 
   const shown = sessionStorage.getItem('novara-intro-seen');
   if (shown) {
-    // Already shown this session - hide immediately
-    intro.style.display = 'none';
     intro.remove();
     return;
   }
 
-  // Mark as seen
   sessionStorage.setItem('novara-intro-seen', '1');
 
   const leave = () => {
     intro.classList.add('is-leaving');
-    // Use a more robust removal method
-    setTimeout(() => {
-      if (intro && intro.parentNode) {
-        intro.parentNode.removeChild(intro);
-      }
-    }, 750);
+    setTimeout(() => intro.remove(), 800);
   };
 
-  // Trigger the intro sequence
   if (reduceMotion) {
-    setTimeout(leave, 100);
+    setTimeout(leave, 300);
   } else {
     setTimeout(leave, 1850);
   }
-
-  // Safety: ensure intro is gone after 2.8 seconds regardless
-  setTimeout(() => {
-    if (intro && intro.parentNode) {
-      intro.style.display = 'none';
-      intro.parentNode.removeChild(intro);
-    }
-  }, 2800);
 })();
