@@ -1,2 +1,130 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Get an indicative NOVARA e-waste estimate."><title>E-Calculator | NOVARA</title><link rel="stylesheet" href="styles.css"></head><body>
-<canvas id="fluid-bg" aria-hidden="true"></canvas><header><div class="container"><nav><a class="brand" href="index.html">NOVARA</a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a class="active" href="calculator.html">Calculator</a></li><li><a href="facts.html">Facts</a></li><li><a href="health.html">Health</a></li><li><a href="india-kerala.html">India &amp; Kerala</a></li><li><a href="team.html">Team</a></li></ul></nav></div></header><main><section class="hero calculator-hero"><div class="container hero-grid"><div><span class="eyebrow">NOVARA e-calculator</span><h1 class="kinetic"><span>Give your</span> <span>old device a</span> <span>clearer next step.</span></h1><p class="sub">Search your exact phone, laptop, tablet, smartwatch, console, battery or gadget from 100+ models, then tell us its condition and age. It is not a final offer; an authorized assessment is always needed.</p><a class="btn" href="#estimate-form">Estimate my device</a></div><div class="hero-visual" aria-hidden="true"><div class="orb one"></div><div class="orb two"></div><div class="hero-symbol">₹</div></div></div></section><section class="container reveal"><div class="calculator-layout"><form id="estimate-form" class="calculator-card" novalidate><div class="form-heading"><span class="eyebrow">Step 1 of 1</span><h2>Tell us about the device</h2><p>Only share the information needed for this indicative estimate.</p></div><div class="field device-search-field"><label for="deviceSearch">Device model <span aria-hidden="true">*</span></label><div class="device-combobox"><input id="deviceSearch" type="text" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="device-options" aria-autocomplete="list" placeholder="Search: iPhone 13, Galaxy Watch 6, Dell XPS 13…" required><input type="hidden" id="deviceId" name="deviceId"><ul id="device-options" class="device-options" role="listbox" hidden></ul></div><p class="hint">Search by brand and model — phone, laptop, tablet, smartwatch, console, battery or other gadget. Can't find an exact match? Type "other" plus your device type (e.g. "other laptop") for a closest-match estimate.</p></div><div class="field"><label for="damageLevel">Damage level <span aria-hidden="true">*</span></label><select id="damageLevel" name="damageLevel" required><option value="">Choose the closest match</option><option value="minor">Minor wear or repair needed</option><option value="moderate">Moderate damage</option><option value="severe">Severe damage</option><option value="nonworking">Not working</option></select></div><div class="field"><label for="usageMonths">Months of use <span aria-hidden="true">*</span></label><input id="usageMonths" name="usageMonths" type="number" min="0" max="180" step="1" inputmode="numeric" placeholder="For example, 36" required></div><div class="field"><label for="damageDescription">Damage details <span aria-hidden="true">*</span></label><textarea id="damageDescription" name="damageDescription" maxlength="500" required placeholder="Example: battery drains quickly, screen cracked"></textarea><p class="hint">Do not enter passwords, serial numbers, addresses or other sensitive information.</p></div><label class="consent"><input id="consent" name="consent" type="checkbox" required><span>I agree that NOVARA may store this estimate request for follow-up and service improvement. I understand this is an indicative estimate, not a final offer.</span></label><p id="form-message" class="form-message" role="alert" aria-live="polite"></p><button class="btn" type="submit">See my indicative estimate <span aria-hidden="true">→</span></button></form><aside class="calculator-aside"><span class="eyebrow">What you’ll see</span><h2>More than a price.</h2><div class="mini-impact"><span>↻</span><div><strong>Recovery potential</strong><p>How much material may be kept in circulation.</p></div></div><div class="mini-impact"><span>♧</span><div><strong>Environmental impact</strong><p>A simple view of waste avoided through responsible handover.</p></div></div><div class="mini-impact"><span>♥</span><div><strong>Social impact</strong><p>Why safer, formal recycling helps protect communities.</p></div></div></aside></div><section id="result" class="estimate-result" hidden tabindex="-1"><span class="eyebrow">Your indicative result</span><h2 id="result-title">A next step for your device</h2><p id="result-summary"></p><div class="result-grid"><article><span>Indicative recovery value</span><strong id="value-result">—</strong><small>Subject to a physical assessment.</small></article><article><span>Repair / reuse potential</span><strong id="repair-result">—</strong><small>A guide, not a quote.</small></article><article><span>Sustainable impact</span><strong id="impact-result">—</strong><small id="impact-detail">—</small></article></div><div class="result-actions"><a class="btn" href="india-kerala.html">Plan responsible disposal</a><button class="text-button" id="reset-estimate" type="button">Start another estimate</button></div></section></section></main><footer><div class="container">© 2026 NOVARA · A call to action</div></footer><script src="device-data.js"></script><script src="calculator.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get an indicative NOVARA e-waste estimate for your device.">
+  <title>NOVARA Calculator | E-waste Impact Estimator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="fluid-bg" aria-hidden="true"></canvas>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html" aria-label="NOVARA home"><span class="brand-badge"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="calculator.html">Calculator</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="health.html">Health</a></li>
+        <li><a href="india-kerala.html">India &amp; Kerala</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="calculator-hero">
+    <div class="container">
+      <span class="eyebrow">Know your impact</span>
+      <h1 class="kinetic"><span>What's your device</span> <span>worth to recover?</span></h1>
+      <p class="sub">Get a quick estimate of the materials, energy, and environmental impact of responsibly recycling your electronics.</p>
+    </div>
+  </section>
+
+  <section class="container calculator-layout">
+    <div class="calculator-card">
+      <h2 class="form-heading"><h2>Step 1: Identify your device</h2></h2>
+      <form id="calculator-form">
+        <div class="field">
+          <label for="device-type">Device type</label>
+          <div class="device-combobox">
+            <input type="text" id="device-type" placeholder="Search or select..." autocomplete="off" required>
+            <ul class="device-options" role="listbox" hidden></ul>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="device-condition">Condition</label>
+          <select id="device-condition" required>
+            <option value="">Select condition</option>
+            <option value="working">Working</option>
+            <option value="broken">Broken / Not working</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="device-age">Age (years)</label>
+          <input type="number" id="device-age" placeholder="e.g., 3" min="0" max="50" required>
+        </div>
+
+        <button class="btn" type="submit">Calculate Impact</button>
+      </form>
+    </div>
+
+    <aside class="calculator-aside">
+      <h2>Your estimate</h2>
+      <div id="result-placeholder" class="hint">
+        <p>Fill in the form to see your device's recovery potential.</p>
+      </div>
+      <div id="result-container" hidden>
+        <div class="result-grid">
+          <article>
+            <strong id="result-weight">0</strong>
+            <p>kg of material</p>
+          </article>
+          <article>
+            <strong id="result-energy">0</strong>
+            <p>kWh energy saved</p>
+          </article>
+          <article>
+            <strong id="result-co2">0</strong>
+            <p>kg CO₂ avoided</p>
+          </article>
+        </div>
+        <div class="mini-impact">
+          <span id="result-note">Equivalent to planting 5 trees</span>
+        </div>
+        <p class="text-button" role="button" tabindex="0" id="reset-calc">← Start over</p>
+      </div>
+    </aside>
+  </section>
+
+  <section class="container reveal">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2 class="section-title">Recovery data from real devices</h2>
+      </div>
+      <p class="section-sub">Our estimates are based on component analysis, material composition, and industry recovery rates for each device category.</p>
+    </div>
+    <div class="cards-3">
+      <article class="card">
+        <div class="icon">01</div>
+        <h3>Device profile</h3>
+        <p>We match your device against known specs: weight, materials, components, and typical lifespan.</p>
+      </article>
+      <article class="card">
+        <div class="icon">02</div>
+        <h3>Material recovery</h3>
+        <p>Based on certified recycling processes, we estimate recoverable metals, plastics, and glass.</p>
+      </article>
+      <article class="card">
+        <div class="icon">03</div>
+        <h3>Carbon offset</h3>
+        <p>Recycling saves the energy cost of manufacturing new materials. We translate that into avoided CO₂.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2026 NOVARA · A call to action</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
