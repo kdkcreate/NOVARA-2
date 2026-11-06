@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test your e-waste knowledge in the NOVARA Environmental Impact Challenge.">
+  <title>E-Waste Impact Challenge | NOVARA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><div class="container"><nav><a class="brand" href="index.html" aria-label="NOVARA home">NOVARA</a></nav></div></header>
+  <main class="game-wrap">
+    <section class="game-intro" id="game-intro" aria-labelledby="game-title">
+      <span class="eyebrow">Learn by choosing</span>
+      <h1 id="game-title">E-Waste<br>Impact Challenge</h1>
+      <p>Every device has a material story. Explore what can happen when electronics are discarded or processed unsafely—and why responsible collection and recycling matter.</p>
+      <p>Answer eight shuffled questions about common electronic items. The explanations distinguish possible risks from guaranteed outcomes: impacts depend on materials, handling and recycling methods.</p>
+      <div class="game-meta"><span>8 questions</span><span>Multiple choice</span><span>Play at your pace</span></div>
+      <button class="btn" id="start-game" type="button">Begin the challenge <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="game-card" id="game-card" aria-label="Challenge question" hidden>
+      <div class="game-topline"><span id="question-count">Question 1 of 8</span><span class="game-score" id="score-display">Score 0</span></div>
+      <div class="game-progress" role="progressbar" aria-label="Question progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><span id="progress-fill" style="width:0%"></span></div>
+      <div class="item-illustration" id="item-illustration" role="img" aria-label="Electronic waste item">📱</div>
+      <p class="eyebrow" id="item-category">A device at end of life</p>
+      <h2 class="question" id="question-text"></h2>
+      <div class="answer-list" id="answer-list" role="group" aria-label="Choose one answer"></div>
+      <div class="feedback" id="answer-feedback" aria-live="polite" hidden><strong id="feedback-title"></strong><p id="feedback-explanation"></p></div>
+      <div class="game-actions"><span class="game-score" id="answer-status" aria-live="polite">Choose the best answer.</span><button class="btn" id="next-question" type="button" disabled>Choose an answer</button></div>
+    </section>
+
+    <section class="game-results" id="game-results" aria-labelledby="results-title" hidden>
+      <span class="eyebrow">Challenge complete</span>
+      <h1 id="results-title">A more informed next step.</h1>
+      <div class="score-big" id="final-score">0/8</div>
+      <p id="results-summary"></p>
+      <p>Remember: risks depend on the item's materials and how it is handled. Keep usable electronics in service where possible, and use an authorized collection or recycling route for end-of-life items.</p>
+      <div class="cta"><button class="btn" id="restart-game" type="button">Play again</button><a class="btn btn-outline" href="health.html">Explore health &amp; environment</a></div>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 NOVARA · Learn about responsible e-waste action</div></footer>
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
