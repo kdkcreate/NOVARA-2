@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about the environmental impacts of electronic waste with the NOVARA E-Waste Impact Challenge.">
+  <title>E-Waste Impact Challenge | NOVARA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="fluid-bg" aria-hidden="true"></canvas>
+  <header><div class="container"><nav class="site-nav" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="NOVARA home"><span class="brand-mark">N</span><span>NOVARA</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-drawer" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  </nav></div></header>
+  <div class="nav-backdrop" data-nav-close hidden></div>
+  <aside class="nav-drawer" id="site-drawer" aria-label="Site navigation" aria-hidden="true" inert>
+    <div class="drawer-head"><p class="eyebrow">NOVARA / INDEX</p><h2>Navigate to...?</h2><p>Choose a page to explore.</p></div>
+    <ul class="drawer-links">
+      <li><a href="index.html"><span>Home</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="calculator.html"><span>Calculator</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="facts.html"><span>Facts</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="health.html"><span>Health</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="india-kerala.html"><span>India &amp; Kerala</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="team.html"><span>Team</span><span aria-hidden="true">↗</span></a></li>
+      <li><a href="ewaste-challenge.html" aria-current="page" class="active"><span>E-Waste Challenge</span><span aria-hidden="true">↗</span></a></li>
+    </ul>
+    <div class="drawer-foot"><span>RETHINK. RECYCLE. RESTART.</span><span>© 2026 NOVARA</span></div>
+  </aside>
+  <main>
+    <section class="hero challenge-hero"><div class="container hero-grid">
+      <div><span class="eyebrow">NOVARA FIELD CHALLENGE / 001</span><h1 class="kinetic"><span>Small device.</span><span>Long</span><span>environmental story.</span></h1><p class="sub">Explore what can happen when electronics are discarded carelessly, and why responsible collection and recycling matter.</p><a class="btn" href="#challenge">Enter the challenge <span aria-hidden="true">↓</span></a></div>
+      <div class="hero-visual challenge-visual" aria-hidden="true"><div class="challenge-orbit"></div><div class="challenge-symbol">♻</div><span class="visual-caption">MATERIALS / IMPACT / RECOVERY</span></div>
+    </div></section>
+    <section class="container challenge-wrap reveal" id="challenge">
+      <div class="section-heading"><div><span class="eyebrow">Learn by choosing</span><h2 class="section-title">E-Waste Impact Challenge</h2></div><p class="section-sub">Eight questions. One better-informed next step. Read each explanation because the real world is more nuanced than a quiz score.</p></div>
+      <div class="game-panel" id="impact-game" aria-live="polite">
+        <section class="game-intro" id="game-intro"><div class="game-art" aria-hidden="true"><span>♻</span><i></i><b></b></div><div class="game-intro-copy"><p class="game-kicker">FIELD GUIDE / INTERACTIVE</p><h3>What happens after the plug is pulled?</h3><p>Identify the environmental risk or recovery opportunity associated with each electronic item. Impacts depend on the product's materials and how it is handled, so choose the most accurate answer.</p><ul class="game-meta"><li><strong>08</strong><span>Questions</span></li><li><strong>01</strong><span>At a time</span></li><li><strong>∞</strong><span>Things to learn</span></li></ul><button class="btn" id="start-game" type="button">Start challenge <span aria-hidden="true">→</span></button></div></section>
+        <section class="game-question" id="game-question" hidden>
+          <div class="game-top"><span class="game-step" id="game-step">QUESTION 01 / 08</span><span class="game-score">SCORE <strong id="live-score">0</strong></span></div>
+          <div class="game-progress" role="progressbar" aria-label="Question progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="game-progress"><span id="game-progress-fill"></span></div>
+          <div class="question-layout"><div class="item-art" id="item-art" aria-hidden="true"><span id="item-emoji">📱</span><small id="item-category">DEVICE / 01</small></div><div class="question-copy"><p class="game-kicker">ENVIRONMENTAL IMPACT</p><h3 id="question-title">What is a key concern?</h3><p id="question-prompt"></p><div class="answer-list" id="answer-list"></div><p class="answer-feedback" id="answer-feedback" role="status" aria-live="polite"></p><div class="explanation" id="explanation" hidden><strong id="explanation-title">Why it matters</strong><p id="explanation-text"></p></div><button class="btn" id="next-question" type="button" disabled>Next question <span aria-hidden="true">→</span></button></div></div>
+        </section>
+        <section class="game-results" id="game-results" hidden><div class="result-seal" aria-hidden="true">✓</div><p class="game-kicker">FIELD REPORT / COMPLETE</p><h3 id="result-heading">Challenge complete.</h3><p class="result-total"><strong id="final-score">0/8</strong><span>correct answers</span></p><p id="result-copy"></p><div class="result-actions"><button class="btn" id="restart-game" type="button">Play again <span aria-hidden="true">↻</span></button><a class="btn btn-outline" href="health.html">Explore health impacts</a></div></section>
+      </div>
+      <p class="game-note">Educational note: the risks described are possible outcomes of unsafe handling, not guaranteed results for every discarded item. Use authorised collection and recycling channels.</p>
+    </section>
+  </main>
+  <footer><div class="container">© 2026 NOVARA · A call to action</div></footer>
+  <script src="script.js"></script>
+  <script src="ewaste-game.js"></script>
+</body>
+</html>
