@@ -3,7 +3,7 @@
 // curated for this project — not live market data. Calibrate freely.
 // category keys must match CATEGORY_META in calculator.js.
 
-const DEVICE_DATABASE = [
+window.DEVICE_DATABASE = [
   // ---- Smartphones ----
   { id: 'iphone-15-pro-max', name: 'Apple iPhone 15 Pro Max', category: 'smartphone', value: 85000 },
   { id: 'iphone-15', name: 'Apple iPhone 15', category: 'smartphone', value: 55000 },
