@@ -1,0 +1,19 @@
+/* Forest palette: both theme settings stay within the green identity. */
+:root,body,body.dark{--bg:#092d20;--surface:#143d2c;--ink:#f4f3df;--muted:#c0d2bc;--teal:#a2d9a3;--gold:#e7c67e;--line:#386348;--night:#041b12;--shadow:0 20px 60px #00180f55}
+body.dark{--bg:#061f16;--surface:#103324;--line:#31553e;--night:#03150e}
+body .drawer,body.dark .drawer{background:rgba(12,43,29,.95);color:var(--ink)}
+body{background-color:var(--bg)}
+.foliage{position:fixed;inset:70px 0 0;overflow:hidden;pointer-events:none;z-index:2;contain:layout paint}
+.leaf-cluster{position:absolute;top:0;left:-24px;width:clamp(68px,8vw,125px);height:auto;opacity:.75;transform-origin:15% 0;animation:leaf-sway 8s ease-in-out infinite alternate}
+.leaf-cluster.right{left:auto;right:-24px;transform-origin:85% 0;animation-name:leaf-sway-right;animation-delay:-3s}
+.foliage.home-leaves .leaf-cluster{width:clamp(130px,17vw,270px);left:-48px;opacity:.85}
+.foliage.home-leaves .leaf-cluster.right{left:auto;right:-48px}
+.foliage .leaf-vein{fill:none;stroke:#bed580;stroke-width:1.4;opacity:.55}
+.foliage .leaf-stem{fill:none;stroke:#668653;stroke-width:3;stroke-linecap:round}
+/* Keep all reading and interaction layers above the edge decoration. */
+main,footer{position:relative;z-index:3}header{z-index:30}
+@keyframes leaf-sway{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}
+@keyframes leaf-sway-right{from{transform:rotate(5deg)}to{transform:rotate(-5deg)}}
+body.leaves-paused .leaf-cluster{animation-play-state:paused}
+@media(max-width:650px){.leaf-cluster{width:58px;left:-26px;opacity:.5}.leaf-cluster.right{right:-26px}.foliage.home-leaves .leaf-cluster{width:115px;left:-60px;opacity:.65}.foliage.home-leaves .leaf-cluster.right{right:-60px}}
+@media(prefers-reduced-motion:reduce){.leaf-cluster{animation:none!important}}

@@ -1,4 +1,11 @@
 header .logo{display:flex;width:80px;height:50px;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}header .logo img{display:block;width:auto;max-width:100%;height:44px;object-fit:contain}
+/* Content-sized component labels: wrapping never exceeds the coloured surface. */
+.exploded{grid-template-columns:repeat(2,minmax(0,1fr))}
+.parts{height:auto;display:grid;gap:1.2rem;padding:1rem 0;min-width:0}
+.parts .part{position:relative;inset:auto;width:100%;height:auto;min-height:64px;padding:1rem 1.2rem;line-height:1.6;overflow-wrap:anywhere;box-sizing:border-box}
+.parts .part:nth-child(2){color:#18392a}
+.parts:hover .part:nth-child(n){transform:none}
+@media(max-width:700px){.exploded{grid-template-columns:minmax(0,1fr)}}
 .drawer{background:rgba(255,250,240,.93);backdrop-filter:blur(24px) saturate(130%);-webkit-backdrop-filter:blur(24px) saturate(130%)}body.dark .drawer{background:rgba(16,50,44,.94)}.veil.open{backdrop-filter:blur(5px)}
 .quiz-option.correct::after{content:'✓';display:inline-block;color:#8dffb8;font-size:1.5rem;margin-left:.8rem;animation:tick-in .5s ease both}@keyframes tick-in{from{opacity:0;transform:scale(.1) rotate(-40deg)}70%{transform:scale(1.3)}to{opacity:1;transform:scale(1)}}
 .drawer{height:100dvh;overflow-y:auto;padding-top:2rem;visibility:hidden}.drawer.open{visibility:visible}.drawer-close{display:block;margin-bottom:2rem}.drawer a{overflow-wrap:anywhere}.veil{height:100dvh}
@@ -7,4 +14,5 @@ main:not(.wrap)>section:not(.wrap):not(:has(>.wrap)){padding-left:max(1.25rem,ca
 .quiz-panel{max-width:800px;margin:2rem 0}.quiz-option{cursor:pointer;transition:transform .2s,background .2s,border-color .2s;white-space:normal}.quiz-option:not(:disabled):hover{transform:translateX(5px)}.quiz-option:not(:disabled):active{transform:scale(.98)}.quiz-option:disabled{cursor:default;opacity:1}.quiz-option.correct{background:#175b36;color:#fff;border:2px solid #77e3a2;animation:answer-pop .3s ease}.quiz-option.wrong{background:#812e35;color:#fff;border:2px solid #ffb5ba;animation:answer-shake .3s ease}.quiz-feedback{min-height:4rem;margin:1.2rem 0}.quiz-panel h2{font:700 1.45rem/1.4 Manrope,Arial,sans-serif;letter-spacing:normal}.quiz-panel progress{width:100%;accent-color:var(--teal)}
 @keyframes answer-pop{50%{transform:scale(1.015)}}@keyframes answer-shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 :focus-visible{outline:3px solid var(--gold);outline-offset:4px}.reveal{opacity:1;transform:none}h1,h2{overflow-wrap:break-word}.card,.milestone{min-width:0;overflow-wrap:anywhere}
+html[lang="ml"] body{font-family:"Noto Sans Malayalam","Manjari",system-ui,sans-serif;line-height:1.8}html[lang="ml"] h1,html[lang="ml"] h2{font-family:inherit;line-height:1.45;letter-spacing:normal;font-size:clamp(2rem,4.3vw,4.2rem)}html[lang="ml"] .eyebrow,html[lang="ml"] .drawer a{line-height:1.8;letter-spacing:normal}html[lang="ml"] .part{height:auto;min-height:54px;font-size:.85rem}html[lang="ml"] .flip,html[lang="ml"] .flip>div{min-height:310px}html[lang="ml"] .quiz-panel h2{font-size:1.35rem}
 @media(prefers-reduced-motion:reduce){.quiz-option{animation:none!important;transition:none!important}}

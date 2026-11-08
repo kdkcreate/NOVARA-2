@@ -1,0 +1,9 @@
+/* Editorial photographs keep their complete frame, including faces and artwork. */
+.story-photo-band{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:1.5rem;margin:2rem 0}
+.story-photo{margin:2rem 0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.story-photo-band .story-photo{margin:0}
+.story-photo a{display:block;background:var(--night)}
+.story-photo img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain}
+.story-photo figcaption{padding:1rem 1.25rem;color:var(--muted);font-size:.9rem;line-height:1.7}
+.story-photo a:focus-visible{outline-offset:-5px}
+@media(max-width:680px){.story-photo-band{grid-template-columns:1fr;gap:1rem}.story-photo{margin:1.5rem 0}.story-photo img{max-height:480px}}
