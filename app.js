@@ -9,7 +9,7 @@ const fixes=document.createElement('link');fixes.rel='stylesheet';fixes.href='la
 const workStyles=document.createElement('link');workStyles.rel='stylesheet';workStyles.href='work.css';document.head.append(workStyles);
 const theme=document.querySelector('.theme');let saved=localStorage.getItem('novara-theme');if(saved? saved==='dark':matchMedia('(prefers-color-scheme:dark)').matches)document.body.classList.add('dark');theme.onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('novara-theme',document.body.classList.contains('dark')?'dark':'light')};
 document.querySelectorAll('.reveal').forEach(el=>new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&el.classList.add('on')),{threshold:.15}).observe(el));
-if(!sessionStorage.novaraIntro&&!matchMedia('(prefers-reduced-motion:reduce)').matches){document.body.insertAdjacentHTML('afterbegin','<div class="intro"><div><img src="novara-logo.png" alt=""><p>A CALL TO ACTION</p></div></div>');setTimeout(()=>document.querySelector('.intro').classList.add('hide'),2000);sessionStorage.novaraIntro='1'}
+if(!sessionStorage.novaraIntroDrawV1&&!matchMedia('(prefers-reduced-motion:reduce)').matches){document.body.insertAdjacentHTML('afterbegin','<div class="intro"><div><img src="novara-logo.png" alt=""><p>A CALL TO ACTION</p></div></div>');setTimeout(()=>document.querySelector('.intro').classList.add('hide'),2000);sessionStorage.novaraIntroDrawV1='1'}
 
 drawer.insertAdjacentHTML('beforeend','<a href="our-work.html">Our Work</a>');
 for(const source of ['malayalam.js','language.js','kiosk-demo.js']){const script=document.createElement('script');script.src=source;script.async=false;document.body.append(script)}

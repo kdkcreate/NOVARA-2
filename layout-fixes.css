@@ -1,4 +1,9 @@
 header .logo{display:flex;width:80px;height:50px;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}header .logo img{display:block;width:auto;max-width:100%;height:44px;object-fit:contain}
+/* Let the official mark reveal outward from its centre in the opening intro. */
+.intro img{clip-path:inset(0 50% round 10px);animation:novara-mark-draw 1.2s cubic-bezier(.16,.84,.24,1) .12s both}
+.intro p{animation:novara-tagline-reveal .65s ease-out .8s both}
+@keyframes novara-mark-draw{0%{clip-path:inset(0 50% round 10px);opacity:.65}62%{clip-path:inset(0 12% round 10px);opacity:1}100%{clip-path:inset(0 0 round 10px);opacity:1}}
+@keyframes novara-tagline-reveal{from{opacity:0;clip-path:inset(0 50%)}to{opacity:1;clip-path:inset(0)}}
 /* Content-sized component labels: wrapping never exceeds the coloured surface. */
 .exploded{grid-template-columns:repeat(2,minmax(0,1fr))}
 .parts{height:auto;display:grid;gap:1.2rem;padding:1rem 0;min-width:0}
