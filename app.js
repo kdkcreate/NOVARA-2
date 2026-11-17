@@ -14,3 +14,4 @@ if(!sessionStorage.novaraIntroDrawV1&&!matchMedia('(prefers-reduced-motion:reduc
 drawer.insertAdjacentHTML('beforeend','<a href="our-work.html">Our Work</a>');
 for(const source of ['malayalam.js','language.js','kiosk-demo.js']){const script=document.createElement('script');script.src=source;script.async=false;document.body.append(script)}
 const foliageScript=document.createElement('script');foliageScript.src='foliage.js';document.body.append(foliageScript);
+const videoAdminScript=document.createElement('script');videoAdminScript.src='video-admin.js';document.body.append(videoAdminScript);
