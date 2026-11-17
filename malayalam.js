@@ -1,4 +1,5 @@
 window.NOVARA_ML = {
+"Time":"സമയം",
 "Score":"സ്കോർ",
 "Houses":"വീടുകൾ",
 "Pause":"നിർത്തുക",
